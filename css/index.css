@@ -27,7 +27,7 @@ audio {
     cursor: pointer;
 
 }
-.container li:hover{
+.container li>span:hover{
     color: #fff;
 }
 .container li.active{

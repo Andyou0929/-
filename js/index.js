@@ -48,9 +48,11 @@ function createLrcElements(){
     for (let i = 0; i < lrcData.length; i++) {
         const obj = lrcData[i];
         let li = document.createElement("li");
-        li.onclick = handlerClickLrc;
-        li.dataset.time = obj.time
-        li.textContent = obj.words;
+        let span = document.createElement("span")
+        span.onclick = handlerClickLrc;
+        span.textContent = obj.words;
+        span.dataset.time = obj.time
+        li.appendChild(span)
         frag.appendChild(li);
     }
     doms.ul?.appendChild(frag)
